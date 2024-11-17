@@ -1,0 +1,79 @@
+@media (max-width: 991px) {
+  #events .image {
+    display: none;
+  }
+}
+
+.time-count-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.event-info {
+  text-align: center;
+}
+
+.event-info h3 {
+  text-transform: capitalize;
+  font-size: 20px;
+  margin: 30px 0 5px;
+}
+
+.event-info p {
+  color: var(--gray-777);
+  background-color: #fff;
+}
+
+#events form {
+  --border-radius-value: 40px;
+  border-radius: var(--border-radius-value);
+  background-color: #eee;
+  max-width: 600px;
+  margin: 60px auto 0;
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 767px) {
+  #events form {
+    max-width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    --border-radius-value: 0;
+  }
+}
+
+#events form input {
+  padding: 10px;
+  flex: 1;
+  border: none;
+  border-radius: var(--border-radius-value);
+  outline-color: #ddd;
+  caret-color: var(--main-blue-color);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#events form input::placeholder {
+  text-transform: capitalize;
+}
+
+#events form button {
+  background-color: var(--main-blue-color);
+  text-transform: capitalize;
+  border: none;
+  padding: 10px;
+  border-radius: var(--border-radius-value);
+  color: #fff;
+  cursor: pointer;
+  transition: var(--main-transition);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#events form button:hover {
+  background-color: var(--main-color-alt);
+}

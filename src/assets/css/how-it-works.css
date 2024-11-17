@@ -1,0 +1,9 @@
+@media (max-width: 940px) {
+  #how-it-works .flexbox-container {
+    flex-direction: column;
+  }
+
+  #how-it-works .image img {
+    max-width: 80%;
+  }
+}

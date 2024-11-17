@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+@import url("./assets/css/header.css");
+@import url("./assets/css/hero-section.css");
+@import url("./assets/css/our-skills.css");
+@import url("./assets/css/how-it-works.css");
+@import url("./assets/css/events.css");
+@import url("./assets/css/plans.css");
+@import url("./assets/css/top-videos.css");
+@import url("./assets/css/stats.css");
+@import url("./assets/css/discount.css");
+@import url("./assets/css/footer.css");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-blue-color: #2196f3;
+  --link-hover-color: #fafafa;
+  --main-color-alt: #1787e0;
+  --main-transition: 0.3s;
+  --section-background: #ececec;
+  --gray-777: #777;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  background-color: #f1f2f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-blue-color);
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+section,
+#main-footer {
+  --top-bottom-padding: 80px;
+  padding-top: var(--top-bottom-padding);
+  padding-bottom: var(--top-bottom-padding);
+}
+
+section:nth-child(odd) {
+  background-color: #fff;
+}
+
+#hero-section {
+  background-color: #fff;
+}
+
+section:nth-child(even) {
+  background-color: var(--section-background);
+}
+
+.limit-width {
+  margin-left: auto;
+  margin-right: auto;
+  --right-left-padding: 50px;
+  padding-left: var(--right-left-padding);
+  padding-right: var(--right-left-padding);
+}
+
+@media (max-width: 991px) {
+  .limit-width {
+    --right-left-padding: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .limit-width {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .limit-width {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .limit-width {
+    width: 1170px;
+  }
+}
+
+/* grid-system */
+.grid-box {
+  display: grid;
+  gap: 40px;
+}
+
+.grid-4-cols {
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+}
+
+.grid-3-cols {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+/* flexbox-system */
+.flexbox-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.flexbox-container > div:first-child {
+  flex: 0.75;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexbox-container > div:last-child {
+  flex: 1;
+}
+
+.flexbox-container > div:first-child img {
+  max-width: 100%;
+}
+
+/* background image */
+.bg-image {
+  background: url("../images/dots.png") no-repeat 100% 20%,
+    url("../images/dots.png") no-repeat 0 80%;
+}
+
+/* ======== */
+
+.spikes {
+  position: relative;
+}
+
+.spikes::after {
+  --size: 30px;
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: calc(-1 * var(--size));
+  width: 100%;
+  height: var(--size);
+  background: linear-gradient(135deg, #fff 25%, transparent 25%),
+    linear-gradient(225deg, #fff 25%, transparent 25%);
+  background-size: var(--size);
+}

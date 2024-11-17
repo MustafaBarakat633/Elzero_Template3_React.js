@@ -1,0 +1,46 @@
+#top-videos .limit-width {
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  #top-videos .limit-width {
+    flex-direction: column;
+  }
+}
+
+.video-list {
+  border: 1px solid #ccc;
+}
+
+.video-list > div {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.mix-videos {
+  color: #000;
+}
+
+.video-show {
+  background-color: #e2e2e2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.video-show video {
+  width: 100%;
+}
+
+.video-show p {
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+}
